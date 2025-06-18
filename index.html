@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Find Unclaimed Money – Finderish</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9fafb;
+      margin: 0;
+      padding: 0;
+      color: #111827;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 2rem;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      margin-top: 40px;
+    }
+    h1 {
+      color: #1d4ed8;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+    .cta-button {
+      display: block;
+      text-align: center;
+      background: #10b981;
+      color: white;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      text-decoration: none;
+      margin-top: 1rem;
+    }
+    .flash {
+      background: #fef9c3;
+      color: #92400e;
+      padding: 0.5rem;
+      border-left: 5px solid #facc15;
+      margin-bottom: 1rem;
+      transition: all 0.5s ease-in-out;
+      min-height: 40px;
+    }
+    .steps {
+      background: #f3f4f6;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+    .testimonial {
+      background: #ecfdf5;
+      padding: 1rem;
+      border-left: 4px solid #10b981;
+      margin-top: 1rem;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="flash" id="flash-message">💡 Someone in Texas just found $312.44 in unclaimed funds!</div>
+
+    <h1>Find Out If You're Owed Money</h1>
+    <p>Every year, billions in unclaimed property like forgotten checks, refunds, and inheritance sit waiting to be claimed. Use Finderish.com to search for what’s rightfully yours – it's fast, secure, and free to start.</p>
+
+    <div class="steps">
+      <strong>How It Works:</strong>
+      <ol>
+        <li>Click Search Now below </li>
+        <li>Enter your name and state</li>
+        <li>Search public databases for matches</li>
+      </ol>
+    </div>
+
+    <a class="cta-button" href="https://finderish.com" target="_blank">🔍 Search Now </a>
+
+    <div class="testimonial">“I had no idea I was owed $860 from an old insurance refund. Finderish made it easy to claim!” – Tasha M.</div>
+    <div class="testimonial">“Got back $435 from an old deposit I completely forgot about. Highly recommend checking!” – James P.</div>
+    <div class="testimonial">“It only took a few minutes, and I found money in my grandmother’s name. Amazing service.” – Nina L.</div>
+  </div>
+
+  <script>
+    const flashMessages = [
+      "💡 Someone in Texas just found $312.44 in unclaimed funds!",
+      "📍 A New York resident just discovered $1,278 in forgotten bank deposits!",
+      "✅ Over $2 billion in unclaimed assets go untouched each year — check yours now!"
+    ];
+    let flashIndex = 0;
+    const flashElement = document.getElementById('flash-message');
+
+    setInterval(() => {
+      flashIndex = (flashIndex + 1) % flashMessages.length;
+      flashElement.textContent = flashMessages[flashIndex];
+    }, 4000); // Change every 4 seconds
+  </script>
+</body>
+</html>
